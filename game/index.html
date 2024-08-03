@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game v5</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Memory-Game - ATHLÉ</h1>
+    </header>
+    <div id="gameContainer">
+        <div class="game-board" id="gameBoard"></div>
+    </div>
+    <footer>
+        <p>Jeu créé avec Phaser</p>
+    </footer>
+
+    <!-- éléments graphiques -->
+    <div id="startSceneContainer" class="overlay-container">
+        <img id="startScene" src="/final/scenes/start-scene.png" alt="Start Scene">
+        <div id="difficultyButtons">
+            <button class="difficultyButton" data-difficulty="beginner">Débutant</button>
+            <button class="difficultyButton" data-difficulty="intermediate">Intermédiaire</button>
+            <button class="difficultyButton" data-difficulty="pro">Pro</button>
+        </div>
+    </div>
+    <div id="endSceneContainer" class="overlay-container">
+        <img id="endScene" src="/final/scenes/end-scene-lose.png" alt="End Scene">
+        <img id="gameOverText" src="/final/texts/game-over-text.png" alt="Game Over Text">
+        <img id="restartButton" src="/final/texts/restart-button.png" alt="Restart Button">
+        <button id="menuButtonEnd">Menu</button>
+    </div>
+
+    <div id="winSceneContainer" class="overlay-container">
+        <img id="winScene" src="/final/scenes/end-scene-win.png" alt="Win Scene">
+        <img id="playerScoreText" src="/final/texts/player-score-text.png" alt="Player Score Text">
+        <div id="moveCount" class="move-count">Movements: 0</div>
+        <img id="victoryText" src="/final/texts/victory-text.png" alt="Victory Text">
+        <button id="menuButtonWin">Menu</button>
+        <button id="restartButtonWin">Recommencer</button> <!-- bouton pour recommencer la partie -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
